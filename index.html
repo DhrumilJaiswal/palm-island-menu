@@ -1,0 +1,785 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///C:/Users/dhrum/Downloads/Untitled-1.html -->
+<html lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<title>Palm Island Menu</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+.garlic-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+.garlic-item .item-prices {
+  display: flex;
+  gap: 15px;
+}
+    .item {
+    display: grid;
+    grid-template-columns: 1fr 80px 80px; /* name | price 1 | price 2 */
+    align-items: center;
+    margin: 5px 0;
+  }
+  .item-name {
+    font-weight: 600;
+  }
+  .item-price {
+    text-align: right;
+    font-weight: 600;
+  }
+
+  header {
+    text-align: center;
+    background: #5c2c0c;
+    color: white;
+    padding: 30px 20px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+  header p {
+    margin: 5px 0 0;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .menu-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fdf5e6;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .menu-container::before {
+    content: "";
+    background: url("/assets/image/logo.png") no-repeat center center;
+    background-size: 500px;
+    opacity: 0.07;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .section {
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #5c2c0c;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #5c2c0c;
+    padding-bottom: 5px;
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+  }
+  .item-name {
+    font-weight: 600;
+  }
+  .item-desc {
+    font-size: 13px;
+    color: #555;
+    margin: 2px 0 5px 0;
+    font-style: italic;
+  }
+  .item-price {
+    font-weight: bold;
+    min-width: 60px;
+    text-align: right;
+     white-space: nowrap;
+  }
+
+  .menu-note {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    margin-top: 20px;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+  }
+
+.pizza-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    margin: 10px 0;
+  }
+
+  .pizza-item .item-name {
+    font-weight: 600;
+  }
+
+  .pizza-item .item-desc {
+    font-size: 14px;
+    color: #555;
+    margin-top: 2px;
+  }
+
+  .pizza-item .item-price {
+    text-align: right;
+    font-weight: bold;
+    white-space: nowrap;
+    padding-left: 10px;
+  }
+  .menu-container {
+  position: relative;
+}
+
+  .trademark {
+  position: absolute;
+  bottom: 10px;         /* distance from bottom */
+  right: 20px;          /* distance from right */
+  font-size: 11px;      /* small */
+  font-weight: 300;     /* light font */
+  color: #666;          /* subtle gray */
+  font-style: italic;   /* optional */
+  margin: 0;
+}
+
+/* For all devices up to 768px (tablets and mobile) */
+@media (max-width: 768px) {
+  .menu-container {
+    display: block !important;
+    width: 100% !important;
+}
+header{
+  width: 112%;
+  display: block;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>PALM ISLAND</h1>
+  <p>MENU</p>
+  <img src="./assets/image/logo.jpg" alt="Palm Island Logo" style="width:100px; margin-top:10px;">
+</header>
+
+<!-- ===== FOOD GRID ===== -->
+<div class="menu-container">
+  <div class="section">
+    <h2>Fries - Nachos</h2>
+    <div class="item"><div class="item-name">Salted Fries</div><div class="item-price">₹100</div></div>
+    <div class="item"><div><div class="item-name">Peri Peri Fries</div><div class="item-desc">(peri peri masala)</div></div><div class="item-price">₹120</div></div>
+    <div class="item"><div><div class="item-name">Cheesy Fries</div><div class="item-desc">(peri peri fries with two types of cheese)</div></div><div class="item-price">₹155</div></div>
+    <div class="item"><div class="item-name">Cheesy Peri Peri Fries</div><div class="item-price">₹175</div></div>
+    <div class="item-desc">(fries with two types of cheese)</div>
+    <div class="item"><div class="item-name">Truffle Cheesy Fries</div><div class="item-price">₹250</div></div>
+    <div class="item"><div class="item-name">Cheese Peri Peri Fries (New)</div><div class="item-price">₹250</div></div>
+    <div class="item"><div class="item-name">Potato Wedges</div><div class="item-price">₹100</div></div>
+    <div class="item"><div><div class="item-name">Peri Peri Potato Wedges</div><div class="item-desc">(peri peri masala)</div></div><div class="item-price">₹120</div></div>
+    <div class="item"><div><div class="item-name">Nachos</div><div class="item-desc">(nachos with cheese dip &amp; salsa)</div></div><div class="item-price">₹165</div></div>
+    <div class="item"><div><div class="item-name">Cheese Nachos</div><div class="item-desc">(nachos toppings with cheese &amp; two different sauces)</div></div><div class="item-price">₹250</div></div>
+    <div class="item"><div><div class="item-name">Cheese Nachos + Veggies</div><div class="item-desc">(nachos with topping of cheese &amp; veggies)</div></div><div class="item-price">₹250</div></div>
+    <div class="item"><div class="item-name">Cheese Corn Nuggets (5 pcs.)</div><div class="item-price">₹120</div></div>
+    <div class="item"><div class="item-name">Cheese Corn Nuggets (10 pcs.)</div><div class="item-price">₹200</div></div>
+    <h2>Garlic Bread 2Pc/4Pc</h2>
+
+<div class="garlic-item">
+  <div class="item-name">Corn &amp; Tomato</div>
+  <div class="item-prices">
+    <div class="item-price">₹105</div>
+    <div class="item-price">₹185</div>
+  </div>
+</div>
+
+<div class="garlic-item">
+  <div class="item-name">1000 Island</div>
+  <div class="item-prices">
+    <div class="item-price">₹105</div>
+    <div class="item-price">₹185</div>
+  </div>
+</div>
+
+<div class="garlic-item">
+  <div class="item-name">Double Cheese</div>
+  <div class="item-prices">
+    <div class="item-price">₹115</div>
+    <div class="item-price">₹230</div>
+  </div>
+</div>
+
+<div class="garlic-item">
+  <div class="item-name">Tandoori Paneer</div>
+  <div class="item-prices">
+    <div class="item-price">₹125</div>
+    <div class="item-price">₹245</div>
+  </div>
+</div>
+
+<div class="garlic-item">
+  <div class="item-name">Cheese Mushroom</div>
+  <div class="item-prices">
+    <div class="item-price">₹135</div>
+    <div class="item-price">₹255</div>
+  </div>
+</div>
+
+<div class="garlic-item">
+  <div class="item-name">Peri Peri &amp; Bell Pepper</div>
+  <div class="item-prices">
+    <div class="item-price">₹145</div>
+    <div class="item-price">₹280</div>
+  </div>
+</div>
+
+<div class="garlic-item">
+  <div class="item-name">Palm Island Special Spicy</div>
+  <div class="item-prices">
+    <div class="item-price">₹145</div>
+    <div class="item-price">₹280</div>
+  </div>
+</div>
+
+<div class="garlic-item">
+  <div class="item-name">Mexicana</div>
+  <div class="item-prices">
+    <div class="item-price">₹165</div>
+    <div class="item-price">₹310</div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="section">
+    <h2>Burgers</h2>
+    <div class="item"><div class="item-name">Classic Burger</div><div class="item-price">₹80</div></div>
+    <div class="item"><div class="item-name">Tandoori Burger</div><div class="item-price">₹120</div></div>
+    <div class="item"><div class="item-name">1000 Burger</div><div class="item-price">₹120</div></div>
+    <div class="item"><div class="item-name">Makhani Burger</div><div class="item-price">₹120</div></div>
+    <div class="item"><div class="item-name">Peri Peri Burger</div><div class="item-price">₹120</div></div>
+          <div class="item-desc">        (VEG PATTY, ONION, JALEPENO, LETTUCE)         </div>
+
+    <div class="item"><div><div class="item-name">Veggie Burger</div><div class="item-desc">(veg patty, cheese slice, lettuce &amp; creamy sauce)</div></div><div class="item-price">₹130</div></div>
+    <div class="item"><div><div class="item-name">American Cheese Burger</div><div class="item-desc">(veg patty with a cheese slice, cocktail sauce, jalapeno, corn, lettuce)</div></div><div class="item-price">₹150</div></div>
+   
+    <div class="item"><div class="item-name">Peri Peri Paneer Burger</div><div class="item-price">₹180</div></div>
+    <div class="item-desc">(soft peri peri paneer cube with veg patty, jalapenos, lettuce)</div>
+   
+   
+    <div class="item"><div class="item-name">Tandoori Paneer Burger</div><div class="item-price">₹180</div></div>
+    <div class="item-desc">(tandoori paneer cube with veg patty, jalapenos, lettuce)</div>
+   
+    <div class="item"><div><div class="item-name">Cheese Burst Burger</div><div class="item-desc">(cheesy patty with cocktail sauce, jalapeno &amp; cheese slice)</div></div><div class="item-price">₹210</div></div>
+    <div class="item"><div><div class="item-name">Double Decker Burger</div><div class="item-desc">(cheesy patty &amp; veg patty, lettuce, jalapeno, cheese slice)</div></div><div class="item-price">₹250</div></div>
+    <h2>Add Ons</h2>
+    <div class="item"><div class="item-name">Veg Burger Patty</div><div class="item-price">₹25</div></div>
+    <div class="item"><div class="item-name">Cheese Slice</div><div class="item-price">₹20</div></div>
+      <div class="menu-note">
+    “For frying, we exclusively use Groundnut Oil and Cottonseed Oil to ensure the highest quality and taste in every dish.”
+  </div>
+  </div>
+
+  <div class="section">
+  <h2>Wraps / Grilled Sandwich</h2>
+
+  <div class="item">
+    <div class="item-name">Peri Peri</div>
+    <div class="item-price">₹150 / ₹250</div>
+  </div>
+  <div class="item">
+    <div class="item-name">Smokey BBQ</div>
+    <div class="item-price">₹150 / ₹250</div>
+  </div>
+  <div class="item">
+    <div class="item-name">1000 Island</div>
+    <div class="item-price">₹150 / ₹250</div>
+  </div>
+  <div class="item">
+    <div class="item-name">Chipotle</div>
+    <div class="item-price">₹150 / ₹250</div>
+  </div>
+  <div class="item">
+    <div class="item-name">Paneer Makhani</div>
+    <div class="item-price">₹190 / ₹275</div>
+  </div>
+  <div class="item">
+    <div class="item-name">Tandoori Paneer</div>
+    <div class="item-price">₹190 / ₹275</div>
+  </div>
+  <div class="item">
+    <div class="item-name">Mushroom Bell Pepper</div>
+    <div class="item-price">₹190 / ₹275</div>
+  </div>
+  <div class="item">
+    <div class="item-name">Cheese Italian</div>
+    <div class="item-price">₹210 / ₹310</div>
+  </div>
+  <div class="item">
+    <div class="item-name">Palm Island Special</div>
+    <div class="item-price">₹250 / ₹325</div>
+  </div>
+  <div class="item">
+    <div class="item-name">Chilly Cheese Sandwich</div>
+    <div class="item-price">₹190 / ₹275</div>
+  </div>
+  <div class="item">
+    <div class="item-name">Pesto Sandwich</div>
+    <div class="item-price">₹210 / ₹310</div>
+  </div>
+
+  <h3>Wrap</h3>
+  <p><small>[Olive oil, red &amp; yellow bell pepper, lettuce, veg patty, cheese]</small></p>
+
+  <h3>Grilled Sandwich</h3>
+  <p><small>[Brown bread / multigrain bread] [Red &amp; yellow bell pepper, lettuce, onion, tomato &amp; cucumber]</small></p>
+
+   <h2>Maggie</h2>
+    <div class="item"><div class="item-name">Classic Maggie</div><div class="item-price">₹80</div></div>
+    <div class="item"><div class="item-name">Masala Pahadi Maggie</div><div class="item-price">₹100</div></div>
+    <div class="item"><div class="item-name">Cheese Maggie</div><div class="item-price">₹120</div></div>
+    <div class="item"><div class="item-name">Peri Peri Maggie</div><div class="item-price">₹120</div></div>
+    <div class="item"><div class="item-name">Chili Garlic Maggie</div><div class="item-price">₹120</div></div>
+    <div class="item"><div class="item-name">Veggie Maggie</div><div class="item-price">₹120</div></div>
+    <div class="item"><div class="item-name">Veggie Cheese Maggie</div><div class="item-price">₹130</div></div>  
+    <div class="item"><div class="item-name">Mayo Cheese Chili Maggie</div><div class="item-price">₹140</div></div>
+    <div class="item"><div class="item-name">Palm Island Special Maggie</div><div class="item-price">₹150</div></div>
+  </div>
+  <p style="text-align:right; font-style:italic; font-weight:bold;">* Prices are exclusive of GST</p>
+<p class="trademark">© Designed &amp; Developed by Dhrumil Jaiswal™</p>
+
+</div>
+
+<div class="menu-container">
+  <div class="section">
+    <h2>Pasta</h2>
+    <div class="section">
+  
+  <div class="item">
+    <div>
+      <div class="item-name">Arrabbiata Pasta</div>
+      <div class="item-desc">(Spicy tomato-based pasta with garlic and herbs)</div>
+    </div>
+    <div class="item-price">₹350</div>
+  </div>
+  <div class="item">
+    <div>
+      <div class="item-name">Alfredo Pasta</div>
+      <div class="item-desc">(Creamy white sauce made with butter, garlic &amp; parmesan)</div>
+    </div>
+    <div class="item-price">₹350</div>
+  </div>
+  <div class="item">
+    <div>
+      <div class="item-name">Pink Rosatella Pasta</div>
+      <div class="item-desc">(A fusion of tomato &amp; cream sauce, smooth and fiery)</div>
+    </div>
+    <div class="item-price">₹350</div>
+  </div>
+  <div class="item">
+    <div>
+      <div class="item-name">Pesto Pasta</div>
+      <div class="item-desc">(Basil pesto tossed with perfectly cooked pasta)</div>
+    </div>
+    <div class="item-price">₹350</div>
+  </div>
+  <div class="item">
+    <div>
+      <div class="item-name">Cheese Pesto Pasta</div>
+      <div class="item-desc">(Creamy cheese blend with rich pesto sauce)</div>
+    </div>
+    <div class="item-price">₹350</div>
+  </div>
+  <div class="item">
+    <div>
+      <div class="item-name">Aglio e Olio Pasta</div>
+      <div class="item-desc">(Garlic and olive oil with chili flakes for a light, flavorful dish)</div>
+    </div>
+    <div class="item-price">₹350</div>
+  </div>
+  <div class="item">
+    <div>
+      <div class="item-name">Cheesy Mushrooms Pasta</div>
+      <div class="item-desc">(A creamy mushroom delight with melted cheese)</div>
+    </div>
+    <div class="item-price">₹350</div>
+  </div>
+
+   <h2>Time Pass</h2>
+ <div class="item">
+      <div class="item-name">Cheesy Pocket</div>
+      <div class="item-price">₹80</div>
+    </div>
+       <div class="item">
+      <div class="item-name">Cheesy Paneer Pocket</div>
+      <div class="item-price">₹100</div>
+    </div>
+
+    <div class="item">
+      <div class="item-name">Palm Island Special Pocket</div>
+      <div class="item-price">₹120</div>
+    </div>
+    
+    <div class="item">
+      <div class="item-name">Crispy Cheesy Dragon Roll</div>
+      <div class="item-price">₹90</div>
+    </div>
+
+    <div class="item">
+      <div class="item-name">Crispy Paneer Cheesy Dragon Roll</div>
+      <div class="item-price">₹110</div>
+    </div>
+ 
+
+
+    <div class="item">
+      <div class="item-name">Mexican Dragon Roll</div>
+      <div class="item-price">₹130</div>
+    </div>
+  
+</div>
+
+  </div>
+<div class="section">
+ <h2>PIZZA 7"/9"</h2>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Margherita</div>
+    <div class="item-desc">(mozzarella cheese &amp; marinara sauce)</div>
+  </div>
+  <div class="item-price">₹190 | ₹280</div>
+</div>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Farm Fresh</div>
+    <div class="item-desc">(onion, tomato, corn, green capsicum)</div>
+  </div>
+  <div class="item-price">₹225 | ₹350</div>
+</div>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Mushroom &amp; Cheese</div>
+    <div class="item-desc">(mushroom &amp; mozzarella cheese)</div>
+  </div>
+  <div class="item-price">₹250 | ₹390</div>
+</div>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Mexican</div>
+    <div class="item-desc">(red &amp; yellow bell peppers, tomato, jalapeno, black olive &amp; sweet corn)</div>
+  </div>
+  <div class="item-price">₹250 | ₹390</div>
+</div>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Cheesey Pizza</div>
+    <div class="item-desc">(different types of cheese)</div>
+  </div>
+  <div class="item-price">₹250 | ₹390</div>
+</div>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Tandoori Veggie</div>
+    <div class="item-desc">(onion, tomato, green capsicum, mushroom, jalapeno)</div>
+  </div>
+  <div class="item-price">₹325 | ₹450</div>
+</div>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Tandoori Paneer</div>
+    <div class="item-desc">(tandoori paneer, onion, tomato, red bell pepper)</div>
+  </div>
+  <div class="item-price">₹325 | ₹450</div>
+</div>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Peri Peri Veggie</div>
+    <div class="item-desc">(corn, black olive, capsicum, jalapeno, mushroom, tomato, red paprika)</div>
+  </div>
+  <div class="item-price">₹325 | ₹450</div>
+</div>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Peri Peri Paneer</div>
+    <div class="item-desc">(peri peri paneer, onion, tomato, corn, red paprika, yellow bell peppers)</div>
+  </div>
+  <div class="item-price">₹325 | ₹450</div>
+</div>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Paneer Makhani</div>
+    <div class="item-desc">(makhani paneer, onion, capsicum, red capsicum)</div>
+  </div>
+  <div class="item-price">₹325 | ₹450</div>
+</div>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Veggie Paradise</div>
+    <div class="item-desc">(onion, capsicum, mushroom, corn, tomato, jalapeno, red paprika)</div>
+  </div>
+  <div class="item-price">₹325 | ₹450</div>
+</div>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Pesto Veggie</div>
+    <div class="item-desc">(tomato, onions, bell peppers)</div>
+  </div>
+  <div class="item-price">₹425 | ₹550</div>
+</div>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Truffle Pizza</div>
+    <div class="item-desc">(mozzarella cheese, mushroom truffle, oil)</div>
+  </div>
+  <div class="item-price">₹425 | ₹550</div>
+</div>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Paneer Chilly</div>
+    <div class="item-desc">(chilly paneer, tomato, onion, red bell pepper)</div>
+  </div>
+  <div class="item-price">₹425 | ₹550</div>
+</div>
+
+<div class="pizza-item">
+  <div>
+    <div class="item-name">Cheese Burst</div>
+    <div class="item-desc">(to make any of the above pizza a cheese burst)</div>
+  </div>
+  <div class="item-price">+₹85 | +₹125</div>
+</div>
+
+</div>
+
+
+
+<div class="section">
+  <h2>CROISSANT  Veg/Panner</h2>
+
+  <div class="item">
+    <div class="item-name">Italian Cheese Croissant</div>
+    <div class="item-price"> ₹220 |  ₹275</div>
+  </div>
+
+  <div class="item">
+    <div class="item-name">Chilli Cheese Croissant</div>
+    <div class="item-price"> ₹250 |  ₹300</div>
+  </div>
+
+  <div class="item">
+    <div class="item-name">Hawaiian Club Croissant</div>
+    <div class="item-price"> ₹275 |  ₹300</div>
+  </div>
+
+  <div class="item">
+    <div class="item-name">Mediterranean Club Croissant</div>
+    <div class="item-price"> ₹275 |  ₹325</div>
+  </div>
+
+  <div class="item">
+    <div class="item-name">Pesto Mushroom Croissant</div>
+    <div class="item-price"> ₹300 |  ₹350</div>
+  </div>
+
+  <div class="item">
+    <div class="item-name">Pesto Cheese Croissant</div>
+    <div class="item-price"> ₹300 |  ₹350</div>
+  </div>
+
+   <h2> Dessert  </h2>
+   <div class="item">
+    <div class="item-name"> NUTELLA  CROISSANT</div>
+    <div class="item-price"> ₹250</div>
+  </div>
+  <div class="item">
+    <div class="item-name">CHOCOLATY  CROISSANT</div>
+    <div class="item-price"> ₹250</div>
+  </div>
+  <div class="item">
+    <div class="item-name">ALMOND  CROISSANT</div>
+    <div class="item-price">₹250</div>
+  </div>
+  <div class="item">
+    <div class="item-name"> BISCOFF CROISSANT</div>
+    <div class="item-price"> ₹280</div>
+  </div>
+  <div class="item">
+    <div class="item-name"> FERRERO CROISSANT</div>
+    <div class="item-price"> ₹285</div>
+  </div>
+
+</div>
+  <p style="text-align:right; font-style:italic; font-weight:bold;">* Prices are exclusive of GST</p>
+
+</div>
+
+<!-- ===== DRINKS & DESSERT GRID ===== -->
+<div class="menu-container">
+  <div class="section">
+    <h2>Cheesecake</h2>
+    <div class="item"><div class="item-name">Blueberry Cheesecake</div><div class="item-price">₹250</div></div>
+    <div class="item"><div class="item-name">Nutella Cheesecake</div><div class="item-price">₹250</div></div>
+    <div class="item"><div class="item-name">Cookie Cream Cheesecake</div><div class="item-price">₹250</div></div>
+    <div class="item"><div class="item-name">Chocolaty Cheesecake</div><div class="item-price">₹250</div></div>
+    <div class="item"><div class="item-name">Biscoff Cheesecake</div><div class="item-price">₹250</div></div>
+    <div class="item"><div class="item-name">Ferrero Cheesecake</div><div class="item-price">₹250</div></div>
+    <div class="item"><div class="item-name">Strawberry cheesecake</div><div class="item-price">₹250</div></div>
+    <div class="item"><div class="item-name">Oreo cheesecake</div><div class="item-price">₹280</div></div>
+    <div class="item"><div class="item-name">French pistachios</div><div class="item-price">₹285</div></div>
+    <div class="item"><div class="item-name">Choco lava fushion</div><div class="item-price">₹350</div></div>   
+
+
+    <h2>Brownies</h2>
+    <div class="item"><div class="item-name">Chocolate Brownie</div><div class="item-price">₹150</div></div>
+    <div class="item"><div class="item-name">Nutella Brownie</div><div class="item-price">₹165</div></div>
+    <div class="item"><div class="item-name">Kitkat Brownie</div><div class="item-price">₹165</div></div>
+    <div class="item"><div class="item-name">Biscoff Brownie</div><div class="item-price">₹175</div></div>
+        
+<div class="item add-on">
+  <div class="item-name">+ Add Ice Cream</div>
+  <div class="item-price">₹40</div>
+</div>
+
+     <h2>Chillers</h2>
+     <div class="item"><div class="item-name">COCA COLA / ZERO SUGAR</div><div class="item-price">₹55</div></div>
+<div class="item"><div class="item-name">FANTA / SPRITE / THUMPS UPS</div><div class="item-price">₹55</div></div>
+<div class="item"><div class="item-name">RED BULL (250 ML)</div><div class="item-price">₹150</div></div>
+<div class="item"><div class="item-name">COOLBERG</div><div class="item-price">₹125</div></div>
+<div class="item"><div class="item-name">MONSTER</div><div class="item-price">₹200</div></div>
+<div class="item"><div class="item-name">PACKAGED WATER BOTTLE</div><div class="item-price">₹20</div></div>
+
+
+  </div>
+
+  <div class="section">
+    <h2>Coffee &amp; Tea</h2>
+        <div class="item"><div class="item-name">Coffee shot </div><div class="item-price">₹50</div></div>
+
+
+    <div class="item"><div class="item-name">Americano (Hot/Iced)</div><div class="item-price">₹130</div></div>
+                    <div class="item"><div class="item-name">Orange ice Americano </div><div class="item-price">₹150</div></div>
+
+    <div class="item"><div class="item-name">Redbull Iced Americano</div><div class="item-price">₹150</div></div>
+    <div class="item"><div class="item-name">Hot Coffee</div><div class="item-price">₹150</div></div>
+    <div class="item"><div class="item-name">Hibiscus Flower Tea</div><div class="item-price">₹150</div></div>
+    <div class="item"><div class="item-name">Butterfly Pea Flower Tea</div><div class="item-price">₹150</div></div>
+    <div class="item"><div class="item-name">Green Tea</div><div class="item-price">₹150</div></div>
+    <div class="item"><div class="item-name">Iced Coffee</div><div class="item-price">₹150</div></div>
+    <div class="item"><div class="item-name">Cold Coffee</div><div class="item-price">₹160</div></div>
+    <div class="item"><div class="item-name">Mocha / Matcha Cold Coffee</div><div class="item-price">₹165</div></div>
+    <div class="item"><div class="item-name">Vanilla / Hazelnut Cold Coffee</div><div class="item-price">₹170</div></div>
+    <div class="item"><div class="item-name">Caramel / Almond Cold Coffee</div><div class="item-price">₹170</div></div>
+    <div class="item"><div class="item-name">Java Chips / Cookie Cold Coffee</div><div class="item-price">₹170</div></div>
+
+    <h2>Hot Chocolate</h2>
+   <div class="item">
+  <div class="item-name">Cadbury Hot Chocolate</div>
+  <div class="item-price">₹150</div>
+  <div class="item-price">₹220</div>
+</div>
+<div class="item">
+  <div class="item-name">Nutella Hot Chocolate</div>
+  <div class="item-price">₹165</div>
+  <div class="item-price">₹235</div>
+</div>
+<div class="item">
+  <div class="item-name">Kitkat Hot Chocolate</div>
+  <div class="item-price">₹165</div>
+  <div class="item-price">₹235</div>
+</div>
+<div class="item">
+  <div class="item-name">Biscoff Hot Chocolate</div>
+  <div class="item-price">₹170</div>
+  <div class="item-price">₹240</div>
+</div>
+<div class="item">
+  <div class="item-name">Ferrero Hot Chocolate</div>
+  <div class="item-price">₹210</div>
+  <div class="item-price">₹280</div>
+</div>
+  </div>
+
+  <div class="section">
+    <h2>Shakes</h2>
+    <div class="item"><div class="item-name">Strawberry Shake</div><div class="item-price">₹150</div></div>
+    <div class="item"><div class="item-name">Mango Shake</div><div class="item-price">₹150</div></div>
+    <div class="item"><div class="item-name">Blueberry Shake</div><div class="item-price">₹160</div></div>
+    <div class="item"><div class="item-name">Kitkat Shake</div><div class="item-price">₹180</div></div>
+    <div class="item"><div class="item-name">Oreo Shake</div><div class="item-price">₹180</div></div>
+    <div class="item"><div class="item-name">Cadbury Brownie Shake</div><div class="item-price">₹200</div></div>
+    <div class="item"><div class="item-name">Biscoff Shake</div><div class="item-price">₹220</div></div>
+    <div class="item"><div class="item-name">Ferrero Shake</div><div class="item-price">₹240</div></div>
+
+   <h2>Refreshers (350 ML)</h2>
+<div class="item"><div class="item-name">Virgin Mojito</div><div class="item-price">₹130</div></div>
+<div class="item"><div class="item-name">Blue Curacao</div><div class="item-price">₹150</div></div>
+<div class="item"><div class="item-name">Strawberry Lemonade</div><div class="item-price">₹150</div></div>
+<div class="item"><div class="item-name">Mango Lemonade</div><div class="item-price">₹150</div></div>
+<div class="item"><div class="item-name">Green Apple Lemonade</div><div class="item-price">₹150</div></div>
+<div class="item"><div class="item-name">Red Wine</div><div class="item-price">₹150</div></div>
+<div class="item"><div class="item-name">Lemon Ice Tea</div><div class="item-price">₹160</div></div>
+<div class="item"><div class="item-name">Peach Ice Tea</div><div class="item-price">₹165</div></div>
+<div class="item"><div class="item-name">Pineapple Peach</div><div class="item-price">₹170</div></div>
+<div class="item"><div class="item-name">Pineapple Passionfruit</div><div class="item-price">₹170</div></div>
+<div class="item"><div class="item-name">Blue Berry</div><div class="item-price">₹170</div></div>
+<div class="item"><div class="item-name">Mix Berry</div><div class="item-price">₹170</div></div>
+<div class="item"><div class="item-name">Red Wine with Strawberry &amp; Blueberry</div><div class="item-price">₹190</div></div>
+<div class="item"><div class="item-name">Blue Cloud</div><div class="item-price">₹250</div></div>
+<div class="item"><div class="item-name">Pina Colada</div><div class="item-price">₹250</div></div>
+<div class="item"><div class="item-name">Electric Paradise (Red Bull)</div><div class="item-price">₹250</div></div>
+<div class="item"><div class="item-name">Berrie Blast (Red Bull)</div><div class="item-price">₹250</div></div>
+
+  </div>
+
+
+    <p style="text-align:right; font-style:italic; font-weight:bold;">* Prices are exclusive of GST</p>
+
+
+  <!-- ✅ Footer Note -->
+
+</div>
+
+
+
+</body></html>
